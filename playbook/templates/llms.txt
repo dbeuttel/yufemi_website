@@ -1,0 +1,23 @@
+# [Organization name]
+
+> [One-sentence description copied from the Facts Sheet: who you are, what you do, where, for whom.]
+
+Key facts:
+- What we offer: [products/services with prices if public]
+- Where: [address or service area]
+- Contact: [email] · [phone] · [hours]
+- Founded: [year] · [legal name if different]
+- [Any important safety notes, eligibility rules or disclaimers]
+
+## Key pages
+
+- [Home](https://example.com/): [what it covers]
+- [About](https://example.com/about): [who we are]
+- [Service or Product A](https://example.com/a): [one line]
+- [Guide or FAQ](https://example.com/guide): [what questions it answers]
+- [Contact](https://example.com/contact): [how to reach us]
+
+## Optional
+
+- [Blog](https://example.com/blog): [topics]
+- [Policies](https://example.com/policies): [privacy, returns, etc.]

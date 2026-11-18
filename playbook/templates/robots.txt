@@ -1,0 +1,70 @@
+# ============================================================
+# robots.txt template: keep VERSION A or VERSION B, delete the other.
+# Replace example.com and the Disallow paths to suit the site.
+#
+# HOW IT WORKS: a crawler obeys ONLY the most specific group that names it,
+# ignoring the "*" group. So every named group below repeats the same
+# Disallow lines. If you add a private path, add it to EVERY group.
+# robots.txt is a polite request honored by reputable bots, not security.
+# Re-check AI crawler names twice a year.
+# ============================================================
+
+# ---------- VERSION A: Maximum visibility (most businesses & public-information sites)
+# Everyone, including search and AI crawlers (search AND training), may read public pages.
+User-agent: *
+Disallow: /admin/
+Disallow: /cart
+Disallow: /checkout
+Disallow: /account
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+# (Optional) Listing AI crawlers explicitly documents intent and overrides
+# any stricter defaults. Keep the Disallow lines identical to the "*" group.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Disallow: /admin/
+Disallow: /cart
+Disallow: /checkout
+Disallow: /account
+Disallow: /*?*sort=
+Disallow: /*?*filter=
+
+Sitemap: https://example.com/sitemap.xml
+
+
+# ---------- VERSION B: Visible in AI answers, opted OUT of model training
+# (for proprietary, paywalled or licensed content)
+#
+# User-agent: *
+# Disallow: /admin/
+# Disallow: /account
+#
+# # AI search / user-triggered fetchers: allowed (same private paths blocked)
+# User-agent: OAI-SearchBot
+# User-agent: ChatGPT-User
+# User-agent: Claude-SearchBot
+# User-agent: Claude-User
+# User-agent: PerplexityBot
+# User-agent: Perplexity-User
+# Disallow: /admin/
+# Disallow: /account
+#
+# # AI training crawlers: blocked everywhere
+# User-agent: GPTBot
+# User-agent: ClaudeBot
+# User-agent: Google-Extended
+# User-agent: Applebot-Extended
+# User-agent: CCBot
+# Disallow: /
+#
+# Sitemap: https://example.com/sitemap.xml

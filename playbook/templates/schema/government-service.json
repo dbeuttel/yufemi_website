@@ -1,0 +1,31 @@
+{
+  "@context": "https://schema.org",
+  "@type": "GovernmentService",
+  "name": "[Service name, e.g. Apply for a building permit]",
+  "description": "[Plain-language description of the service]",
+  "serviceType": "[Category]",
+  "url": "https://example.gov/[path]",
+  "provider": {
+    "@type": "GovernmentOrganization",
+    "name": "[Department or agency]",
+    "url": "https://example.gov/",
+    "telephone": "[+1-555-555-5555]",
+    "email": "[dept@example.gov]",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "[123 Main St]",
+      "addressLocality": "[City]",
+      "addressRegion": "[ST]",
+      "postalCode": "[00000]",
+      "addressCountry": "US"
+    }
+  },
+  "areaServed": { "@type": "AdministrativeArea", "name": "[County or city]" },
+  "audience": { "@type": "Audience", "audienceType": "[Residents, businesses, ...]" },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "serviceUrl": "https://example.gov/[apply-online]",
+    "servicePhone": { "@type": "ContactPoint", "telephone": "[+1-555-555-5555]" },
+    "availableLanguage": ["English", "Spanish"]
+  }
+}
