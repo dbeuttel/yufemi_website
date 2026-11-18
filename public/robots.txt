@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yufemi.com/sitemap.xml

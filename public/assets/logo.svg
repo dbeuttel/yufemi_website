@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 48" width="220" height="48" role="img" aria-label="Yufemi">
+  <g fill="none" stroke="#13233A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 7 C 12 16, 18 22, 24 26"/>
+    <path d="M39 7 C 36 16, 30 22, 24 26"/>
+    <path d="M24 26 V 42"/>
+  </g>
+  <circle cx="24" cy="26" r="4.25" fill="#A9461F"/>
+  <!-- Wordmark: Fraunces SemiBold. Convert to outlines in a vector editor for production use. -->
+  <text x="56" y="35" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="32" letter-spacing="-0.3" fill="#13233A">yufemi</text>
+</svg>
