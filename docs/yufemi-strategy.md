@@ -1,194 +1,203 @@
-# Yufemi: Business, Brand & Website Strategy
+# Yufemi Wellness: Business, Brand & Website Strategy
 
-_Prepared November 2026 · Draft for internal review_
+_Prepared November 18, 2026 · Draft for internal review_
 
-> **How this was researched.** The live site (yufemi.com) could not be loaded directly from the research environment — its domain was blocked by the sandbox network policy. Findings below are therefore drawn from (a) what search engines have indexed of yufemi.com (the About Us and Contact pages), (b) the public NC business registry listing, and (c) public competitor directories. Every finding is tagged:
+> **How this was researched.** I crawled yufemi.com directly on Nov 18, 2026: the homepage, all 11 URLs in the Yoast sitemap, the WooCommerce Store API (product catalog), robots.txt, and response headers. I also took desktop and mobile screenshots and measured load in headless Chromium. Competitor pricing comes from public retailer listings (Walmart, Vitacost) and should be re-checked before quoting.
 >
-> - **[Verified]** — observed in indexed content or public records.
-> - **[To verify]** — strongly likely given the evidence, but needs a direct look at the live site (a 15-minute check with Lighthouse + view-source once the site is reachable).
+> _An earlier version of this document wrongly treated Yufemi as a consulting firm. That error came from search-engine snippets of the leftover template pages described in §4.1. It's a useful illustration of how much damage those pages do._
 
 ---
 
 ## 1. Business analysis
 
-### 1.1 What Yufemi is today
+### 1.1 What Yufemi is today (observed)
 
-| Attribute | Finding | Source |
-|---|---|---|
-| Legal entity | Yufemi Consulting Group LLC, Raleigh, NC; formed January 25, 2024 | NC business registry [Verified] |
-| Leadership | James Gatabaki, Chief Executive Officer | yufemi.com/about-us [Verified] |
-| Offer | General business consultancy: "tailored strategies" built on "research, data analysis, and industry insight" | yufemi.com/about-us [Verified] |
-| Values | Integrity, Excellence, Innovation, Collaboration ("Guiding Principles for Lasting Partnerships") | yufemi.com/about-us [Verified] |
-| Contact | Phone number + `info.yufemi@gmail.com` | yufemi.com/contact [Verified] |
-| Indexed pages | Only About Us and Contact surface in search; no homepage or service pages rank, even for the exact brand name "yufemi" | Search results [Verified] |
-| Third-party footprint | No reviews, press, Chamber listing, Clutch profile or company LinkedIn page found | Search results [Verified] |
+| Attribute | Finding |
+|---|---|
+| Brand | **Yufemi Wellness**, operated by Yufemi Consulting Group LLC (NC, formed Jan 2024). The LLC name appears inside the logo lockup. |
+| Positioning (site copy) | "Revolutionizing Wellness With More Than Just Sea Moss." Wellness, nutrition and skincare for **busy professionals**, built on sea moss. Culture of "growth, self-improvement, and action." Rallying line: **"DO YUFEMI."** |
+| Live product | **Elderberry Ginger Sea Moss** gel, 16 oz, **$30**. Ingredients: sea moss, elderberry, ginger, spring water. Label: "Wildcrafted · Organic · Immune Support Blend · Keep Refrigerated." |
+| Pipeline (site copy) | Blends for beauty, energy, gut health and mental health; Skincare/Beauty and Apparel categories (currently a single $0 "COMING SOON" placeholder product). |
+| Platform | WordPress + Divi 4.27 + WooCommerce (WooPayments, PayPal, UPS shipping), Yoast SEO, WP Rocket, TranslatePress, Complianz. Bluehost shared hosting. Built via "The Free Website Guys." |
+| Social proof | 0 product reviews; no testimonials; Instagram icon in footer. |
+| Contact | `info.yufemi@gmail.com` + 919 phone on Contact page; homepage "Contact Us" button opens `mailto:` to a different, personal Gmail address. |
 
-### 1.2 Reading between the lines
+### 1.2 The opportunity
 
-Yufemi is an early-stage (≈2-year-old), founder-led boutique consultancy. Its stated differentiator is **evidence-based strategy** (research + data + industry insight). That's a real, sellable angle. But the site today expresses it in generic language that could belong to any of the thousands of firms with the same four values. The business looks credible on paper (registered LLC, named CEO) but **almost invisible online**.
+- **Category is mature but fragmented.** Analyst estimates put the global sea moss market around **$2.6–3.3B (2025)** growing ~2–5%/yr. Growth is slow overall, but demand is driven by social media and the "natural supplement" trend, and the shelf is full of small makers.
+- **Price parity with national brands.** Comparable 16 oz gels: TrueSeaMoss ~$29.74–$34.99, EverSmith Organics ~$29.99 (Walmart/Vitacost listings). At $30, Yufemi is priced right; it must win on **freshness, local trust, flavor and community**, not price.
+- **Yufemi's real differentiators** (to lean into):
+  1. **Small-batch and local.** A North Carolina maker vs. Amazon warehouses (verify and state where it's made).
+  2. **Functional blends** (beauty / energy / gut / mood) as a clear product architecture, rather than a random flavor list.
+  3. **"DO YUFEMI"**: a lifestyle and community brand (the logo is literally a circle of people), not only a supplement jar.
+  4. **Busy-professional focus.** Ready-to-use, no prep, a spoonful a day.
 
 ### 1.3 SWOT
 
 | Strengths | Weaknesses |
 |---|---|
-| Data/research-driven approach is a credible, specific differentiator | Near-zero search visibility; brand name doesn't rank for itself |
-| Founder-led means senior attention on every engagement (a major selling point vs. larger firms) | Generic positioning ("tailored strategies") — no niche, no named outcomes |
-| Unique, ownable name — zero trademark/SEO collisions once indexed | Gmail address and thin site undercut trust at the moment of contact |
-| Raleigh base: the Triangle has one of the fastest-growing small-business populations in the US | No proof: no case studies, testimonials, or client logos |
+| Distinctive, warm logo (circle of people) with real meaning | Store has **one** real product; the rest is "Coming Soon" |
+| Product exists, is photographed, labeled and priced competitively | Template leftovers make the site read as a consulting firm (see §4) |
+| Clear audience (busy professionals) and a memorable rallying line ("DO YUFEMI") | No reviews, no founder story, no "why us" |
+| Store already wired (WooCommerce + payments + shipping) | Brand mixes "Consulting Group LLC" into consumer packaging and logo |
 
 | Opportunities | Threats |
 |---|---|
-| "Data-driven strategy for small businesses" is under-served locally: most Triangle boutiques lead with marketing/branding, not analytics | **Free alternatives** (SCORE, NC SBTDC) set a price anchor of $0 for basic advice |
-| Government/nonprofit and mission-driven orgs need operational + data strategy and buy via referrals and proposals | Freelance platforms (Upwork, Catalant) commoditize short strategy projects |
-| Fixed-scope "productized" offers (e.g. a 2-week Growth Diagnostic) lower the buying barrier | AI tools reduce willingness to pay for generic market research. The firm must sell judgment and implementation, not reports |
-| Google Business Profile + local SEO is low-competition for "business strategy consultant Raleigh" | Larger regional firms with established referral networks |
+| Local retail and farmers markets (Raleigh, Durham, Cary) where fresh gel beats shelf-stable imports | Health-claim and labeling compliance risk (§1.5) |
+| Subscriptions: gel lasts 3–4 weeks, a natural monthly reorder | Cold-chain shipping of a refrigerated product (spoilage → refunds, reviews) |
+| Bundles & flavor sampler; gifting (holiday season is now) | Amazon/Walmart brands with thousands of reviews |
+| Instagram/TikTok "how I use it" content; UGC from first customers | Category fatigue/skepticism around exaggerated sea moss claims |
 
 ### 1.4 Recommended positioning
 
-> **Yufemi helps growing small businesses and mission-driven organizations in the Triangle make their next big decision with evidence, not guesswork.**
+> **Yufemi makes sea moss easy for busy people. Small-batch gels blended for how you want to feel, made in North Carolina, from a brand built around community.**
 
-- **Who:** owner-led businesses (~$500K–$15M revenue) and nonprofits/public-sector teams at an inflection point (expansion, new service line, operational strain, funding).
-- **What:** research-backed strategy *plus* a plan people can execute.
-- **Why Yufemi:** senior, founder-led attention; decisions grounded in data; plain-language deliverables.
-- **Proof to build:** 2–3 short case studies within 6 months (even anonymized: "Durham HVAC contractor, 3 locations").
+- **Hero product:** Elderberry Ginger Sea Moss Gel (the "Immune Support Blend").
+- **Product architecture** (already promised on the site): one jar per goal: _Beauty · Energy · Gut · Mood_. Each blend gets a color from the palette.
+- **Model:** one-time purchase + **subscribe & save** (every 4 weeks) + local pickup/markets.
+- **Brand architecture:** Consumer brand = **YUFEMI Wellness**. Keep "Yufemi Consulting Group LLC" in the legal footer only.
 
-**Productize the entry point.** Lead with one fixed-price, fixed-timeline offer ("The Clarity Sprint: a 2-week growth diagnostic") that converts into larger engagements. This is the single biggest lever against free alternatives: clear scope, clear price, clear outcome.
+### 1.5 Compliance flags (not legal advice; verify with NCDA&CS / an attorney)
+
+| Item | Why it matters | Suggested action |
+|---|---|---|
+| **"Organic"** on the label | Products sold as organic generally need USDA organic certification. Small-operation exemptions exist, but they restrict how the term and seal can be used. | Confirm certification status or change to "made with organic ___" / remove. |
+| **"Immune Support," thyroid, gut and mood claims** | These are structure/function-style claims. They need substantiation and the FDA disclaimer (present on site). Disease claims are not allowed. | Keep claims modest; the draft homepage avoids specific health promises. |
+| **"92 of the 102 minerals"** (homepage FAQ) | Widely repeated online but not well substantiated. | Remove (removed in the draft). |
+| **Refrigerated food product, shipped via UPS** | Selling a perishable food typically needs state food-safety registration/inspection, plus cold-chain handling. A competitor was reported to have had a 2026 FDA-posted recall over temperature-monitoring records. | Confirm NCDA&CS requirements; ship insulated with ice packs, Mon–Wed only; state the shipping policy on the site. |
+| **Pregnancy/thyroid guidance** | Good that it's there. | Keep, and add "consult your healthcare provider" on product pages too. |
 
 ---
 
 ## 2. Competitive landscape
 
-### 2.1 Competitor map
-
-| Competitor | Type | What they lead with | Price signal | Where Yufemi wins |
+| Competitor | Type | Pricing (16 oz) | What they do well | Where Yufemi can win |
 |---|---|---|---|---|
-| **SCORE Raleigh** | Free volunteer mentoring (SBA-affiliated) | Free, confidential mentoring for the life of the business; workshops | Free | Depth, accountability, hands-on analysis; mentors advise, Yufemi delivers |
-| **NC SBTDC** | Free state-funded counseling (UNC System) | Management counseling for small & mid-sized firms; mostly free | Free / low | Speed, dedicated attention, custom research beyond standard programs |
-| **Eloquent Presence Consulting** | Raleigh boutique (Chamber member) | Brand development, growth strategy, digital marketing, coaching | Mid | Analytical rigor; Yufemi is about the business decision, not the brand layer |
-| **Iconic Brand Group** | Startup/growth advisory (Raleigh-Cary pages) | Fundraising strategy, brand, growth marketing | Mid–high | Established-SMB focus rather than startups/fundraising |
-| **Raleigh Consulting Group** | Small (2–9 staff) general business consulting | General business consulting | Mid | Clearer niche + productized offer |
-| **Graham Advisory Network** | Small Raleigh firm | Business consulting + marketing strategy | Mid | Data/research angle |
-| **Indie Consulting** | Raleigh marketing strategy | Marketing & digital strategy | Mid | Whole-business strategy, not marketing only |
-| **Polished Geek** | Raleigh-area operations firm | Project-management automation | Mid | Strategy before tooling; can partner rather than compete |
-| **Upwork / Catalant freelancers** | Platform | Cheap, fast, on-demand | Low–mid | Local presence, continuity, accountability |
+| **TrueSeaMoss** | National, Amazon/Walmart/Whole Foods leader | ~$29.74–$34.99 | Huge flavor range incl. **Elderberry**; massive review count; retail distribution | Fresher, local, a human story; community |
+| **EverSmith Organics** | National DTC + wholesale (Pod Foods) | ~$29.99 | Organic positioning; 16 oz elderberry; clean site | Functional blend story; local presence |
+| **ACEYO** | Amazon brand | verify | Multi-ingredient "4-in-1" ginger blends (digestion angle) | Real food ingredients, no capsule-y feel |
+| **Biolore** | National | verify | — | Reported 2026 FDA-posted recall over temperature records shows why food-safety process is a trust lever |
+| **Local/Instagram makers** (e.g. farmers-market and Big Cartel sellers) | Micro | $20–35 typical | Freshness, personal relationships | Better brand, better site, subscriptions, wider line |
+| **Premium retail** (e.g. Erewhon's Cosmic Berry gel) | Prestige grocery | premium | Aspirational branding | Shows there's room for a "beautiful" sea moss brand |
 
-_Sources: Clutch & The Manifest Raleigh consulting directories, Raleigh Chamber directory, SCORE Raleigh, City of Raleigh small-business resources. Directory data is self-reported; verify before quoting publicly._
-
-### 2.2 Takeaways
-
-1. **The local field is crowded with marketing-led "strategy."** Few Triangle boutiques lead with *research and data*. That's Yufemi's lane.
-2. **Free providers are a referral channel, not just a competitor.** SCORE/SBTDC clients who outgrow free advice need paid implementation help. Build relationships; offer workshops.
-3. **Nobody local productizes well.** Most competitors say "contact us for a quote." A published starting price for a diagnostic stands out immediately.
-4. **Competitor sites win on proof.** Even small firms show logos, testimonials, or case studies. This is Yufemi's most urgent content gap.
+**Takeaways**
+1. **Elderberry is table stakes.** National brands sell it too. Yufemi's elderberry **plus ginger** is a small, real differentiator, and the functional-blend system is a bigger one.
+2. **Reviews are the moat.** Competitors win on volume of social proof. Yufemi needs a review engine from order #1 (post-purchase email + incentive for photo reviews).
+3. **Nobody local owns "the Triangle's sea moss brand."** Farmers markets and local stores are an open lane, and local SEO is cheap to win.
 
 ---
 
 ## 3. Brand kit
 
-### 3.1 Brand idea
+The existing logo is strong and meaningful, so the kit **evolves** the identity rather than replacing it.
 
-**"Clarity, by evidence."** Many scattered options become one confident direction. This idea drives the logo, the hero animation and the voice.
+### 3.1 Logo
 
-### 3.2 Logo
+- **Mark:** six figures holding hands in a circle that also forms a flower, with a green center. Meaning to tell on the site: _community, growth, wholeness. Wellness you do together_.
+- **Wordmark:** "YUFEMI" in a classical caps serif (purple). Drop **"CONSULTING GROUP LLC"** from all consumer-facing lockups and replace with **"WELLNESS"** in small tracked caps.
+- **Lockups:** horizontal (mark + YUFEMI / WELLNESS), stacked (for jars and social avatars), mark-only (favicon, stickers, jar lid).
+- **Clear space:** the diameter of the green center dot × 2. **Minimum size:** mark 24px; horizontal lockup 120px wide.
+- **Files in repo:** `public/assets/yufemi-mark-*.png|webp` (mark extracted from the current logo file). **Ask the designer for the original vector (AI/SVG/PDF).** The site file is a raster, and production needs vectors.
 
-- **Mark:** a geometric **Y** formed by two converging paths that meet at a single point and continue as one line. Two inputs (your goals + the evidence) → one direction. An Ember dot marks the decision point.
-- **Wordmark:** "yufemi" set lowercase in Fraunces SemiBold, slightly tightened (-1% tracking). Lowercase reads approachable, the serif reads established.
-- **Lockups:** horizontal (mark + wordmark) for nav/footers; mark-only for favicon/social avatars.
-- **Clear space:** the height of the Ember dot × 2 on all sides. **Minimum size:** 24px mark / 96px horizontal lockup.
-- Files: `public/assets/logo.svg`, `public/assets/logo-mark.svg`, `public/favicon.svg`.
+**Don'ts:** no "Consulting Group LLC" on consumer touchpoints, no recoloring the people (always Sun Gold), no drop shadows/outer glows, never on busy photo backgrounds without a cream or night plate.
 
-**Don'ts:** don't recolor the dot anything other than Ember/Gold, don't place the Ink logo on Ember, don't add effects (shadows, gradients), don't stretch.
+### 3.2 Color
 
-### 3.3 Color
+Derived from the logo and label (sampled from the actual files):
 
-| Token | Hex | Role | Contrast |
+| Token | Hex | Source / Role | Contrast |
 |---|---|---|---|
-| `--ink` | `#13233A` | Primary text, dark sections, logo | 14.0:1 on Paper |
-| `--paper` | `#F6F1E7` | Primary background (warm, not clinical white) | — |
-| `--ember` | `#A9461F` | Primary accent: buttons, links, the decision dot | 5.2:1 on Paper · white text on Ember 5.9:1 |
-| `--ember-glow` | `#E07A4B` | Decorative only (illustration strokes, highlights). **Never for text.** | — |
-| `--sage` | `#4C6858` | Secondary accent: tags, icons, success states | 5.4:1 on Paper |
-| `--mist` | `#E4E9E3` | Alternate section background, cards | Ink 12.8:1 |
-| `--gold` | `#E9A23B` | Accent **on Ink only** (eyebrows, highlights in dark sections) | 7.3:1 on Ink |
-| `--slate` | `#4A5568` | Secondary body text | 6.7:1 on Paper |
+| `--sun` (Sun Gold) | `#F0B038` | Logo figures. Primary brand color, primary buttons (with Night text), highlights | Night text on Sun 8.7:1 |
+| `--plum` (Yufemi Plum) | `#402868` | Wordmark. Headings, body accents | 11.3:1 on Cream |
+| `--night` (Deep Plum) | `#241640` | Dark sections, footer, body text | 15.4:1 on Cream |
+| `--moss` (Sea Moss Green) | `#28A858` | Logo center dot. **Decorative or on Night only** | 5.4:1 on Night · ✗ on light bg |
+| `--leaf` (Leaf Green) | `#1E7A41` | Accessible green for links, badges, success states on light bg | 5.0:1 on Cream · white on Leaf 5.4:1 |
+| `--cream` | `#FBF6EC` | Primary background (warm, food-friendly) | — |
+| `--sand` | `#F5E9D2` | Alternate section background, cards | Night 13.8:1 |
+| `--mute` | `#5E5470` | Secondary text | 6.6:1 on Cream |
 
-Ratio guidance: ~60% Paper, 25% Ink, 10% Mist/Sage, 5% Ember. Ember is precious; one primary action per view.
+**Blend colors** (for future SKUs, labels and product cards): Immune = Elderberry `#5B2A6E` · Beauty = Hibiscus `#D9577A` · Energy = Citrus `#F08A24` · Gut = Mint `#4FA37F` · Mood = Lavender `#8F7BC8` (decorative; pair text with Night).
 
-### 3.4 Typography
+Proportion guide: 55% Cream/Sand, 25% Night/Plum, 15% Sun Gold, 5% Moss/Leaf.
 
-| Use | Typeface | Weights | Notes |
-|---|---|---|---|
-| Display / headings | **Fraunces** (Google Fonts, variable) | 500–600, opsz auto | Warm, confident serif with character; use the soft "SOFT" axis at 50 |
-| Body / UI | **Inter** (Google Fonts, variable) | 400, 500, 600 | Highly legible, neutral |
-| Data / numbers | Inter with `font-variant-numeric: tabular-nums` | — | For any stats, prices, timelines |
+### 3.3 Typography
 
-Scale (fluid, `clamp()`): H1 2.6→4.5rem · H2 2→3rem · H3 1.25→1.5rem · Body 1.0625rem / 1.65 line-height · Eyebrow 0.8rem uppercase, 0.12em tracking.
+| Use | Typeface | Notes |
+|---|---|---|
+| Wordmark / logotype accents | **Cinzel** (Google Fonts) | Closest free match to the existing caps serif wordmark. Use only for "YUFEMI", eyebrows and labels. |
+| Headlines | **Fraunces** (soft, 600) | Warm, organic, editorial; pairs well with food photography |
+| Body / UI | **DM Sans** (400/500/700) | Friendly, highly legible at small sizes on mobile |
 
-### 3.5 Voice & tone
+Scale: H1 2.6→4.75rem (fluid) · H2 2→3.25rem · Body 1.0625rem/1.65 · Eyebrow 0.8rem Cinzel caps, 0.18em tracking.
 
-| We are | We are not |
+### 3.4 Voice
+
+**Warm, encouraging, honest. Like a friend who's into wellness, not a lab coat or an influencer.**
+
+| Do | Don't |
 |---|---|
-| Plain-spoken: "Here's what the numbers say." | Jargon-heavy: "leverage synergistic paradigms" |
-| Confident, specific: "In two weeks you'll have…" | Vague: "tailored solutions for your unique needs" |
-| Warm, direct, first-person plural ("we") | Corporate third-person ("Yufemi Consulting Group provides…") |
-| Honest about trade-offs | Over-promising ("10x your revenue") |
+| "A spoonful a day, in whatever you're already drinking." | "Unlock 92 minerals to supercharge your immunity!!!" |
+| "Start small and see how you feel." | "Cures / heals / detoxes / treats" (disease claims) |
+| "DO YUFEMI: show up for yourself today." | Corporate filler ("innovative solutions tailored to your unique challenges") |
 
-**Copy test:** if a sentence could appear unchanged on a competitor's site, rewrite it with a number, a timeframe or a concrete example.
+### 3.5 Photography & graphics
 
-Sample rewrite:
-- Before: _"We are committed to upholding the highest level of integrity, honesty, and transparency."_
-- After: _"You'll always know what we're doing, why, and what it costs. No surprise invoices, no black-box recommendations."_
-
-### 3.6 Imagery & iconography
-
-- **Photography:** real Triangle businesses and real people working (not stock handshakes). Natural light, warm grade. Commission one half-day local shoot when budget allows.
-- **Illustration:** thin-line (1.5px) path diagrams in Ink/Ember-glow, echoing the converging-paths logo. Used for hero and section accents.
-- **Icons:** 24px line icons, 1.75px stroke, rounded caps (e.g. Lucide). Sage or Ink only.
-- **Data viz:** Ink for primary series, Ember for the highlighted insight, Sage/Mist for context.
-
-### 3.7 Values reframed as client promises
-
-| Old (generic) | New (promise) |
-|---|---|
-| Integrity | **No black boxes.** Every recommendation shows its evidence. |
-| Excellence | **Built to be used.** Plans sized to your team, not a binder for a shelf. |
-| Innovation | **Fresh eyes, real data.** We test assumptions before we bet on them. |
-| Collaboration | **Your people in the room.** We build the plan *with* the team that will run it. |
+- **Reshoot the jar:** currently on flat gray. Shoot on cream/sand surfaces with real ingredients (elderberries, sliced ginger, a spoon of gel), in daylight, from the 3/4 angle plus top-down. Add lifestyle shots (smoothie, tea, desk at 7 a.m.) to match "busy professionals."
+- **Graphic motif:** soft organic "moss" squiggles and circular forms echoing the logo ring. Thin lines in Sun Gold or Leaf.
+- **Label system:** keep the dark label (it matches Night), with each blend's color as the band.
+- **The two stock-style "heart of sea moss" photos** on the current site: confirm they're licensed; replace with original photography.
 
 ---
 
-## 4. Website issues
+## 4. Website issues (observed Nov 18, 2026)
 
-### 4.1 Confirmed issues
+### 4.1 Critical: fix this week
 
-| # | Issue | Impact | Fix |
+| # | Issue | Evidence | Fix |
 |---|---|---|---|
-| 1 | **Business email is a Gmail address** (`info.yufemi@gmail.com`) on the Contact page | Erodes trust at the exact moment of conversion; also hurts email deliverability for proposals | Set up `hello@yufemi.com` via Google Workspace or Microsoft 365 (~$6–7/mo); configure SPF, DKIM, DMARC |
-| 2 | **Brand name doesn't rank**: searching "yufemi" returns no yufemi.com result on page one; only About/Contact are indexed at all | Prospects who hear the name can't find the site | Submit to Google Search Console + Bing Webmaster; XML sitemap; ensure homepage is indexable (see SEO plan) |
-| 3 | **Generic title tags** ("About Us - Yufemi", "Contact - Yufemi") | Zero keyword or location relevance | Pattern: `Primary keyword in Raleigh, NC \| Yufemi` |
-| 4 | **No services described in indexable content.** Search engines report "no detailed service list" | Can't rank for any service query; visitors can't self-qualify | Dedicated page per service with scope, outcomes, timeline, starting price |
-| 5 | **No location signals**: no city, service area or address on indexed pages | Invisible for "near me" / "Raleigh" queries | Add service area (Raleigh · Durham · Cary · Chapel Hill) site-wide; LocalBusiness schema; Google Business Profile |
-| 6 | **Interchangeable copy.** The values list (integrity/excellence/innovation/collaboration) is so common that search engines conflate the page with unrelated firms | No differentiation; weak topical relevance | Rewrite around specific promises and outcomes (see §3.7) |
-| 7 | **No social proof**: no testimonials, case studies, logos, reviews | Low conversion; no E-E-A-T signals | Collect 3 testimonials now; publish 2 case studies in 6 months; request Google reviews |
-| 8 | **Stale crawl**: the About page's index snapshot is ~16 months old | Changes aren't being picked up; suggests low crawl priority | Fresh content cadence + sitemap `lastmod` + Search Console "Request indexing" |
-| 9 | **No third-party footprint**: no LinkedIn company page, Chamber, Clutch or GBP listing found | Fewer backlinks, fewer discovery paths, less trust | See off-page plan §5.6 |
+| 1 | **About Us page is a consulting-firm template.** It says "At consulting firm, we are committed to being your strategic partner…", has a "Business Strategy Consulting" values section with a typo ("Execllence"), and lists "James Gatabaki" four times as CEO / Head of Department / Manager / Associate. | `/about-us/` | Rewrite as the founder and brand story (why sea moss, why "DO YUFEMI", the logo meaning), or remove it. |
+| 2 | **Contact page talks about "our consultancy services."** | `/contact/` | Rewrite for customers: orders, wholesale, events. |
+| 3 | **`/service-1/` is live Lorem Ipsum** ("Business Strategy Consulting… Get A Free Consultation") and is in the sitemap. | `/service-1/`, `page-sitemap.xml` | Delete and 301 to home. |
+| 4 | **"Hello world!" default post** (with the default WordPress comment) and a blog page whose newsletter signup still has Lorem Ipsum ("Quis blandit erat…"). | `/hello-world/`, `/blog/` | Delete post; remove/redo blog; 301. |
+| 5 | **Google indexes the site as a consulting firm** because of #1–#3. Search results for "Yufemi" return "Yufemi … consultancy" snippets. | Search results | Fixing #1–#4, then requesting re-indexing in Search Console. |
+| 6 | **"COMING SOON" product at $0, in stock**, in Apparel and Skincare. It can likely be added to the cart, and it's in the product sitemap. | Store API: `price 0, is_in_stock true` | Unpublish it; use a waitlist signup instead. |
+| 7 | **The main CTA "Click Here to DO YUFEMI" isn't a link.** It's a plain `<h4>`. | Homepage HTML | Make it a button to the product. |
+| 8 | **The homepage never shows the product or a price or an "Add to cart."** The only product is buried under Products → Health & Wellness. | Homepage | Put the hero product with price and Add to cart above the fold. |
+| 9 | **Two different contact emails**, both Gmail: `info.yufemi@gmail.com` (Contact page) and a personal Gmail on the homepage button. | Homepage + Contact | One branded address: `hello@yufemi.com`. Remove the personal address from the public site. |
 
-### 4.2 Likely issues to verify on the live site
+### 4.2 High: SEO and trust
 
-URL structure (`/about-us/`, `/contact/`) and title format (`Page - Site`) match a default WordPress setup. Check:
+| # | Issue | Fix |
+|---|---|---|
+| 10 | **Homepage `<title>` is just "Yufemi"; no meta descriptions anywhere.** OG title is the template's "Landing / Home." | Titles like `Sea Moss Gel – Elderberry Ginger, Small-Batch \| Yufemi Wellness` + unique meta descriptions per page (Yoast is installed, just unfilled). |
+| 11 | **No Product structured data** on the homepage; only a generic WebPage graph. | Product + Offer + Organization + FAQPage schema (the draft includes it). |
+| 12 | **All content images have empty `alt`** (sea moss photos, jar, logo duplicates). | Descriptive alt text. |
+| 13 | **Zero reviews**; no testimonials. | Post-purchase review request emails; seed with first customers/friends-and-family (honest reviews only). |
+| 14 | **Logo/OG/favicon file is the full lockup incl. "Consulting Group LLC."** Shared links show it. | Dedicated 1200×630 social image (draft includes one). |
+| 15 | **Product page is thin:** one-line description, "SKU: N/A," no usage, storage, shipping or sourcing info. | Full product page: how to use, storage (3–4 wks fridge / 6 mo freezer), ingredients, shipping/cold-pack policy, FAQ. |
+| 16 | **Heading structure is out of order** (H1 → H3 → H4 → H5); the brand mission sits in H3/H4. | One H1, then H2 sections. |
 
-- [ ] **Performance:** run PageSpeed Insights (mobile). Default WP themes + page builders often score < 50 on mobile; target LCP < 2.5s, CLS < 0.1, INP < 200ms.
-- [ ] **Meta descriptions** missing or auto-generated.
-- [ ] **No structured data** (Organization / ProfessionalService / FAQ schema).
-- [ ] **No Open Graph / Twitter tags**, so links shared on LinkedIn render without image or description.
-- [ ] **Missing/weak H1** on the homepage, or multiple H1s.
-- [ ] **Image alt text** missing; oversized images not in WebP/AVIF.
-- [ ] **Accessibility:** color contrast, focus states, form labels, skip link (run axe DevTools).
-- [ ] **Contact form**: does it exist, does it work, does it send a confirmation? (Test submit.)
-- [ ] **Phone number** not click-to-call (`tel:` link) on mobile.
-- [ ] **Plugin/theme updates & security headers** (WordPress sites are frequent targets).
-- [ ] **Privacy policy** page present (needed once analytics/forms are added).
-- [ ] **Registered address:** if the NC registry address is a residence, don't publish it. Use a service-area Google Business Profile instead.
+### 4.3 Medium: UX, performance, hygiene
+
+| # | Issue | Fix |
+|---|---|---|
+| 17 | **Viewport disables zoom** (`maximum-scale=1.0, user-scalable=0`). This is an accessibility failure (WCAG 1.4.4). | Remove those parameters (Divi setting). |
+| 18 | **Language switcher floats over content** (TranslatePress) although the site is English-only. | Remove TranslatePress unless Spanish is coming. |
+| 19 | **Huge empty sections** on the homepage where lazy-loaded image modules render as blank blocks until scrolled; lots of dead space. | Tighten layout; explicit image sizes. |
+| 20 | **Heavy page:** about 2.6 MB transferred and 40 requests on desktop. Load around 3.0s desktop, 1.9s mobile; LCP about 2.0s (headless test, single run). The original jar photo is 1.4 MB at 1536×2048, and the logo is a 2172px file displayed at 218px. | Compress images (WebP ≤ 150 KB), right-size the logo, drop unused plugins. |
+| 21 | **Bulleted list uses the letter "o" as bullets** ("o Perfect for busy lifestyles"). | Real list markup. |
+| 22 | **Footer "Quick Links" points to "Services / Products"** (`/services/` redirects to `/products/`). | Rename "Shop." |
+| 23 | **Footer credit "Website built by The Free Website Guys 🚀"** is more prominent than the brand. | Move to a small credit or remove. |
+| 24 | **Sitemap lastmod for home is Feb 2026.** The site hasn't been updated in 9 months. | Regular updates (new blends, posts). |
+
+### 4.4 To verify manually
+
+- [ ] Does adding "COMING SOON" ($0) to the cart allow a $0 checkout?
+- [ ] Footer Instagram icon: does it link to the right profile?
+- [ ] Shipping settings: do UPS rates allow ground shipping of a refrigerated product to distant zones? Is there a cold-pack option and policy?
+- [ ] Checkout works end to end with WooPayments + PayPal (place a real $30 order and refund it).
+- [ ] Complianz cookie banner behaves correctly (no analytics before consent if targeting EU; otherwise simplify).
+- [ ] Where is the gel made (home kitchen, commissary kitchen)? This affects both compliance and the "made in NC" story.
 
 ---
 
@@ -196,130 +205,129 @@ URL structure (`/about-us/`, `/contact/`) and title format (`Page - Site`) match
 
 ### 5.1 Goals (6 months)
 
-1. Rank #1 for brand queries ("yufemi", "yufemi consulting").
-2. Top-10 for 5+ local commercial queries (below).
-3. 10+ Google reviews; Google Business Profile in the Raleigh local pack for "business consultant".
-4. 4+ qualified inquiries/month from organic + GBP.
+1. Brand query "yufemi" shows **wellness**, not consulting (within 4–6 weeks of cleanup).
+2. Top-10 locally for "sea moss gel Raleigh" / "sea moss near me" (Triangle).
+3. 25+ product reviews with Product rich results (stars) in Google.
+4. Organic + Instagram = 40% of orders.
 
 ### 5.2 Keyword targets
 
-| Cluster | Primary keyword | Supporting | Intent | Target page |
+| Cluster | Primary | Supporting | Intent | Page |
 |---|---|---|---|---|
-| Core | business strategy consultant Raleigh | small business consultant Raleigh NC, business consulting Triangle | Commercial | Home |
-| Diagnostic | small business growth assessment | business health check, growth diagnostic | Commercial | /services/clarity-sprint |
-| Planning | strategic planning consultant Raleigh | strategic plan for small business, 3-year plan | Commercial | /services/strategic-planning |
-| Research | market research for small business NC | market feasibility study, competitor analysis service | Commercial | /services/market-research |
-| Operations | operations consultant small business | process improvement consultant Raleigh | Commercial | /services/operations |
-| Nonprofit | nonprofit strategic planning consultant NC | public sector strategy consultant | Commercial | /industries/nonprofit |
-| Local variants | business consultant Durham / Cary / Chapel Hill | — | Commercial | Location sections or pages (only with unique content) |
-| Informational | how to write a strategic plan for a small business | when to hire a business consultant, SBTDC vs consultant | Informational | /insights/* |
+| Local commercial | sea moss gel Raleigh | sea moss near me, sea moss Durham / Cary, buy sea moss NC | Buy | Home + Google Business Profile |
+| Product | elderberry ginger sea moss gel | elderberry sea moss, sea moss with ginger, immune support sea moss | Buy | Product page |
+| Category | sea moss gel | wildcrafted sea moss gel, small batch sea moss, fresh sea moss gel | Buy | Shop |
+| How-to | how to use sea moss gel | how much sea moss gel per day, sea moss gel in smoothie, sea moss gel recipes | Learn | Guides |
+| Storage | how long does sea moss gel last | can you freeze sea moss gel, how to tell if sea moss gel is bad | Learn | Guide + FAQ |
+| Safety | sea moss side effects | sea moss and thyroid, sea moss during pregnancy | Learn | Guide (careful, cite sources, "consult your provider") |
+| Future blends | sea moss for skin / sea moss face mask, sea moss energy | — | Learn/Buy | Blend pages when launched |
 
-_Validate volumes in Google Keyword Planner or Ahrefs/Semrush before committing content budget. Local B2B volumes are small but highly qualified._
+_Validate volumes in Google Keyword Planner / Ahrefs before writing. Informational sea moss queries are high-volume and competitive; local + product queries are where a small brand can win fastest._
 
-### 5.3 Technical foundation (Weeks 1–2)
+### 5.3 Technical (weeks 1–2)
 
-- [ ] Launch the new site (this repo) on Vercel; point `yufemi.com` + `www` redirect.
-- [ ] 301 redirect old WordPress URLs (`/about-us/` → `/about`, `/contact/` → `/#contact` or `/contact`). Already configured in `vercel.json`.
-- [ ] Google Search Console + Bing Webmaster Tools: verify domain, submit `sitemap.xml`.
-- [ ] Unique `<title>` (≤ 60 chars) and meta description (≤ 155 chars) per page.
-- [ ] Canonical tags; single H1 per page; semantic headings.
-- [ ] Structured data: `ProfessionalService` (with `areaServed`), `Organization`, `FAQPage`, `BreadcrumbList`. Homepage version is in place.
-- [ ] Open Graph + Twitter card tags; 1200×630 social image (`/assets/og-image.png` included).
-- [ ] Core Web Vitals green on mobile. The static build in this repo has no JS framework and self-describing image sizes.
-- [ ] Privacy-friendly analytics (Vercel Web Analytics or Plausible) + conversion event on contact click/form submit.
+- [ ] **Delete/redirect** `/service-1/`, `/hello-world/`, `/blog/` (until real posts exist), and the COMING SOON product. Rewrite `/about-us/` and `/contact/`.
+- [ ] Fill Yoast titles and meta descriptions for every page/product.
+- [ ] Product schema with price, availability, brand, and later aggregateRating.
+- [ ] Alt text on all images; compress images to WebP.
+- [ ] Remove `user-scalable=0`; remove TranslatePress if not needed.
+- [ ] Google Search Console + Bing: verify, submit `sitemap_index.xml`, request re-indexing of the homepage, About and Contact.
+- [ ] **Google Merchant Center** free listings, so the jar shows in Google Shopping for free.
+- [ ] Analytics with e-commerce events (view_item, add_to_cart, purchase).
 
-### 5.4 On-page & content (Weeks 2–8)
+### 5.4 Content (weeks 3–12): 2 guides/month
 
-- Homepage (done in draft), plus one page per service with: problem → approach → deliverables → timeline → starting price → FAQ → CTA.
-- **About page** with founder story, photo, credentials, and *why the name "Yufemi"*. Founder-led firms win on the founder.
-- **Case studies** (even 2 anonymized ones) in the format Challenge → What the data showed → Decision → Result.
-- **Insights blog:** 2 posts/month, each answering one real buyer question. Starter list:
-  1. When should a small business hire a strategy consultant (vs. SCORE or SBTDC)?
-  2. A 1-page strategic plan template for owner-led businesses
-  3. 7 numbers every owner should check before opening a second location
-  4. How to run a market feasibility study on a $5K budget
-  5. What a "growth diagnostic" actually includes (and what it costs)
-  6. Strategic planning for small nonprofits: a practical 90-day process
-- Internal links: every post links to one relevant service page and the Clarity Sprint.
+1. How to use sea moss gel: 9 easy ways (smoothies, tea, oatmeal, dressings…)
+2. How long does sea moss gel last? Storage, freezing, and signs it's gone bad
+3. Elderberry, ginger and sea moss: what's in our Immune Support Blend and why
+4. Sea moss for busy mornings: a 2-minute smoothie routine
+5. Wildcrafted vs. pool-grown sea moss: what's the difference?
+6. Sea moss and your thyroid: what to know before you start (with medical-source citations)
 
-### 5.5 Local SEO (Weeks 1–4)
+Each guide links to the product, includes a recipe card (Recipe schema), and gets repurposed into 3 Instagram/TikTok posts.
 
-- [ ] **Google Business Profile**: category "Business management consultant"; secondary "Business development service"; service-area business (Wake, Durham, Orange counties); services with descriptions; weekly posts; photos.
-- [ ] Consistent NAP (name, phone, service area) across site, GBP, LinkedIn, directories.
-- [ ] Review engine: ask every completed client; send a direct GBP review link.
-- [ ] Bing Places, Apple Business Connect.
+### 5.5 Local (weeks 1–4)
 
-### 5.6 Off-page & authority (ongoing)
+- **Google Business Profile:** category "Health food store" or "Food products supplier" (pick what's accurate), as a service-area business if there's no storefront. Add products, photos, weekly posts.
+- **Farmers markets & pop-ups:** e.g. Raleigh, Durham and Cary markets. Each vendor page = a local backlink and an event to post about.
+- **Local retail & wholesale:** juice bars, gyms, yoga studios, natural grocers. Create a `/wholesale` page.
 
-- **Directories:** Raleigh Chamber, Durham Chamber, Clutch, The Manifest, UpCity, LinkedIn company page.
-- **Partnerships:** offer free workshops to SCORE Raleigh, NC SBTDC, Wake Tech Small Business Center, local libraries. Each one earns a backlink + referrals.
-- **Guest content:** Triangle Business Journal op-eds, local podcasts, NC Rural Center / nonprofit association newsletters.
-- **Founder LinkedIn:** 2 posts/week summarizing insights; link back to articles.
+### 5.6 Off-page
+
+- Instagram/TikTok: "DO YUFEMI" morning-routine series; customer reposts.
+- Micro-influencers in the Triangle (fitness, moms, Black-owned business communities): product seeding, affiliate codes.
+- Directories: Black-owned business directories if applicable, NC "Got to Be NC" program (NCDA&CS) if eligible, local Chambers.
 
 ### 5.7 Measurement
 
-| KPI | Tool | Review |
+| KPI | Tool | Cadence |
 |---|---|---|
-| Impressions, clicks, avg. position by query | Search Console | Monthly |
-| GBP views, calls, website clicks | GBP Insights | Monthly |
-| Contact conversions (form submit, email/phone click) | Analytics events | Monthly |
-| Core Web Vitals | Search Console / Vercel Speed Insights | Monthly |
-| Reviews count & rating | GBP | Monthly |
-
-### 5.8 90-day roadmap
-
-| Weeks | Focus |
-|---|---|
-| 1–2 | Domain email, new homepage live on Vercel, redirects, Search Console, GBP created, analytics |
-| 3–4 | Service pages (4), About page with founder story, directory listings, LinkedIn page |
-| 5–8 | First 2 case studies, 4 blog posts, first workshop pitched to SCORE/SBTDC, review requests |
-| 9–12 | 4 more posts, first guest article, review KPI dashboard, refine keyword targets from Search Console data |
+| Brand query results & clicks; non-brand impressions | Search Console | Monthly |
+| Conversion rate, AOV, repeat rate, subscription count | WooCommerce / analytics | Monthly |
+| Reviews count & rating | WooCommerce + Google | Monthly |
+| GBP views, direction/website clicks | GBP | Monthly |
+| Core Web Vitals | Search Console / PageSpeed | Monthly |
 
 ---
 
 ## 6. Animation & motion concepts
 
-Motion principle: **"Considered, not flashy."** Every animation should reinforce *scattered → clear*. All motion respects `prefers-reduced-motion` (falls back to the final static state), uses only `transform`/`opacity`/`stroke-dashoffset` (GPU-friendly, no layout thrash), and never blocks content.
+Principle: **"Gentle, organic, alive."** Motion should feel like water and growth: slow, soft easing, never jumpy. Everything respects `prefers-reduced-motion`, animates only `transform`/`opacity`/`stroke-dashoffset`, and never delays the Add to cart button.
 
-| # | Concept | Where | How | Status in draft |
+| # | Concept | Where | How | In draft |
 |---|---|---|---|---|
-| 1 | **Converging paths hero.** A dozen thin, wandering lines draw in from the left and converge into one bold Ember path that sweeps up-right; the decision dot pulses once | Hero | SVG `stroke-dasharray`/`dashoffset` with staggered CSS animation | ✅ Built |
-| 2 | **Logo draw-on.** Y mark's two arms draw toward the junction, the stem drops, the dot pops | Nav on first load | CSS keyframes on SVG paths | ✅ Built |
-| 3 | **Word-by-word headline rise.** Hero H1 words fade up in a 60ms stagger | Hero | Split into `<span>`s; CSS transition with `--i` index | ✅ Built |
-| 4 | **Scroll reveals.** Sections and cards fade/rise 16px as they enter the viewport, staggered | Site-wide | `IntersectionObserver` toggling a class | ✅ Built |
-| 5 | **Process timeline progress.** A vertical/horizontal line fills Ember as the user scrolls through the 4 steps; each step node lights up when reached | "How we work" | Scroll-driven CSS (`animation-timeline: view()`) with JS fallback | ✅ Built |
-| 6 | **Card "focus" hover.** Service cards lift 4px; a thin Ember underline draws across; the icon path re-draws | Services | CSS transitions | ✅ Built |
-| 7 | **Magnetic primary CTA.** Button subtly follows the cursor within a few px | Primary CTAs (desktop pointer only) | ~20 lines JS, `pointer: fine` media query | ✅ Built |
-| 8 | **Promise ticker.** Values rotate as a slow, pausable marquee in the dark band | Promises section | CSS marquee, pauses on hover/focus | ✅ Built |
-| 9 | **Noise-to-signal chart.** On the future case-study pages, a scatter of dots resolves into a clean trend line as it enters view | Case studies | SVG/Canvas, triggered once | 💡 Future |
-| 10 | **FAQ accordion easing.** Smooth height animation for answers | FAQ | `<details>` + `interpolate-size` / grid-rows trick | ✅ Built |
-| 11 | **Page transitions.** Cross-fade between pages | Multi-page site | View Transitions API (progressive enhancement) | 💡 Future |
+| 1 | **Living logo.** The circle of figures slowly rotates (60s/turn) and gently "breathes"; the green center pulses once on load | Hero, behind the jar | CSS `rotate` + `scale` keyframes on the mark | ✅ |
+| 2 | **Floating jar.** Product photo bobs a few pixels like it's in water; shadow scales with it | Hero | CSS keyframes | ✅ |
+| 3 | **Drawn sea-moss strands.** Wavy gold/green lines draw themselves around the hero, then drift | Hero | SVG `stroke-dashoffset` + slow `translate` | ✅ |
+| 4 | **Headline word rise** | Hero H1 | Staggered spans | ✅ |
+| 5 | **Ingredient chips pop in** one by one (sea moss → elderberry → ginger → spring water) | Product section | IntersectionObserver + stagger | ✅ |
+| 6 | **"Add to cart" success micro-interaction:** the button morphs into a check and a mini jar drops into the cart icon | Product CTA | CSS + small JS | 💡 Future (needs real cart) |
+| 7 | **Scroll reveals** for sections and cards | Site-wide | IntersectionObserver | ✅ |
+| 8 | **"DO YUFEMI" marquee:** slow ticker of verbs: _DO MORE · DO BETTER · DO YOU · DO YUFEMI_ | Community band | CSS marquee, pauses on hover | ✅ |
+| 9 | **Blend picker.** Hovering/tapping a goal (Beauty / Energy / Gut / Mood) shifts the accent color and swaps the illustration | "Coming soon" blends | CSS custom-property swap | ✅ (color shift) |
+| 10 | **FAQ accordion easing** | FAQ | `<details>` + `interpolate-size` | ✅ |
+| 11 | **Pour/drip loader** for page transitions or the waitlist submit state | Forms | SVG | 💡 Future |
 
-**Avoid:** parallax-heavy hero video, auto-playing carousels, scroll-jacking, and long preloaders. They hurt Core Web Vitals and feel at odds with "plain-spoken."
+Avoid: auto-playing video backgrounds, parallax-heavy sections, carousels for the hero, confetti.
 
 ---
 
-## 7. Homepage draft: what's in it and why
+## 7. Homepage draft: structure
 
-Built in `public/index.html` (static HTML/CSS/JS; deployed on Vercel). Section order follows the buyer's questions:
+Built in `public/index.html` (static, deployed on Vercel). Order follows the buyer's questions:
 
-1. **Nav**: logo, Services, Approach, FAQ, primary CTA "Book a call".
-2. **Hero** _(What is this and is it for me?)_: H1 "Make your next big decision with evidence, not guesswork." Sub-line names the audience and region. Primary CTA (book a discovery call) + secondary (see the Clarity Sprint).
-3. **Proof strip** _(Is this real?)_: Raleigh-based · Founder-led · Est. 2024 · Serving the Triangle. _(Replace with client logos/testimonials as they come in.)_
-4. **Problems we solve** _(Do they get my situation?)_: four short "you might be…" statements.
-5. **Services** _(What exactly do I get?)_: Clarity Sprint (featured), Strategic Planning, Market & Feasibility Research, Operations & Performance.
-6. **How we work**: 4-step animated timeline: Listen → Investigate → Decide → Execute.
-7. **Promises** (values reframed) on a dark band with ticker.
-8. **Why not free help?**: honest comparison with SCORE/SBTDC that positions them as complements.
-9. **FAQ** _(objections + SEO)_: with FAQPage schema.
-10. **Final CTA + footer**: service area, email, LinkedIn, legal.
+1. **Announcement bar:** "Small-batch sea moss gel · DO YUFEMI"
+2. **Nav:** logo, Shop, How to use, Our story, FAQ, cart/shop button
+3. **Hero:** H1 "Sea moss, made easy." Sub-line for busy people, price, primary CTA "Shop Elderberry Ginger – $30", secondary "How to use it." Visual: floating jar inside the rotating logo ring with drawn strands.
+4. **Value strip:** Wildcrafted sea moss · 4 simple ingredients · Ready to use · Lasts 3–4 weeks in the fridge
+5. **Featured product:** photo, ingredient chips, size, price, Add to cart, storage note
+6. **How to use:** 3 steps (Stir · Sip · Repeat) with simple serving ideas
+7. **Blends coming soon:** Beauty / Energy / Gut / Mood + Skincare & Apparel, with a waitlist CTA
+8. **DO YUFEMI:** community/brand story with the logo meaning + marquee
+9. **FAQ:** cleaned-up versions of the current FAQ (storage, side effects, pregnancy, how to use) with FAQPage schema
+10. **Footer:** FDA disclaimer, contact, Instagram, legal entity
 
-### Content to confirm before launch
+### Before launch: confirm
 
-- [ ] **Service list and names.** The four services are a recommended structure based on the stated "research, data analysis, industry insight" approach. Confirm they match what Yufemi actually sells.
-- [ ] **Clarity Sprint price.** Draft shows "from $2,500". Set the real number (or remove).
-- [ ] **Email:** draft uses `hello@yufemi.com`. Create this mailbox (or change it) before going live.
-- [ ] **Booking link:** "Book a call" goes to `mailto:` for now. Swap for Calendly/Cal.com/Microsoft Bookings.
-- [ ] **Phone number:** add a `tel:` link if a business line exists.
-- [ ] **LinkedIn URL** in footer + schema `sameAs`.
-- [ ] No testimonials or statistics were invented for this draft. Add real ones as soon as available.
+- [ ] **Checkout plan:** the static Vercel site can't run WooCommerce. Choose one:
+  - **(a)** Keep WooCommerce on a subdomain (`shop.yufemi.com`) and link Buy buttons there.
+  - **(b)** Move the store to Shopify (Buy Button or full theme).
+  - **(c)** Use Stripe Payment Links (simplest for 1–3 SKUs; no cart).
+  
+  Buy buttons in the draft currently point to the existing WooCommerce product URL, which **will stop working if the domain moves to Vercel** before checkout is moved.
+- [ ] Where the gel is made (the draft avoids a location claim; add "Made in North Carolina" once confirmed).
+- [ ] "Wildcrafted" and "Organic" claims (draft says "wildcrafted" and avoids "certified organic").
+- [ ] `hello@yufemi.com` mailbox (draft uses it).
+- [ ] Instagram handle (footer has a TODO where the link goes).
+- [ ] Waitlist form provider (Mailchimp/Klaviyo/Kit). Draft uses a `mailto:` fallback.
+- [ ] No reviews or testimonials were invented for this draft.
+
+---
+
+## Sources
+
+- yufemi.com, crawled Nov 18, 2026 (homepage, `/about-us/`, `/contact/`, `/products/`, `/product/elderberry-ginger-sea-moss/`, `/product/coming-soon/`, `/service-1/`, `/hello-world/`, `/blog/`, `sitemap_index.xml`, `robots.txt`, `/wp-json/wc/store/v1/products`)
+- Market size: [Fortune Business Insights](https://www.fortunebusinessinsights.com/sea-moss-market-118641), [Market.us](https://market.us/report/sea-moss-market/), [Ken Research](https://www.kenresearch.com/industry-reports/global-sea-moss-supplement-market.md)
+- Competitor pricing: [TrueSeaMoss Elderberry – Walmart](https://www.walmart.com/ip/934075247), [True Sea Moss – Vitacost](https://www.vitacost.com/products/true-sea-moss-sea-moss-gel-superfood-elderberry-16-fl-oz-473-ml-144568), [EverSmith Organics – Walmart](https://www.walmart.com/ip/982446933), [EverSmith Organics](https://www.eversmithorganics.com/)
+- Competitor roundups (editorial, incl. Biolore recall mention, verify on fda.gov): [Medilabzone](https://medilabzone.com/best-sea-moss-gel-brands/), [Bunny Eating](https://bunnyeating.com/best-seamoss-gels/)
+- Premium retail example: [Erewhon Cosmic Berry Sea Moss Gel](https://ship.erewhon.com/products/cosmic-berry-sea-moss-gel)

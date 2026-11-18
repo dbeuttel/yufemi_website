@@ -1,12 +1,12 @@
 # yufemi.com: website redesign
 
-Draft homepage and strategy for **Yufemi Consulting Group** (Raleigh, NC).
+Draft homepage and strategy for **Yufemi Wellness** (small-batch sea moss gel; a brand of Yufemi Consulting Group LLC).
 
 | Path | What it is |
 |---|---|
 | [`docs/yufemi-strategy.md`](docs/yufemi-strategy.md) | Business & competitor analysis, brand kit, site issues, SEO plan, animation concepts |
 | `public/` | The static site Vercel serves (HTML/CSS/JS, no build step) |
-| `public/assets/` | Logo (`logo.svg`, `logo-mark.svg`) and social share image (`og-image.png`) |
+| `public/assets/` | Logo mark (extracted from the current logo file), product photo, social share image (`og-image.png`) |
 | `vercel.json` | Output directory, clean URLs, 301 redirects from the old WordPress URLs, security headers |
 
 ## Run locally
@@ -42,10 +42,10 @@ vercel --prod   # production
 
 Search for `TODO` in `public/index.html`.
 
-- [ ] Service names/descriptions match what Yufemi actually sells
-- [ ] Clarity Sprint price ("from $2,500" is a placeholder)
-- [ ] `hello@yufemi.com` mailbox exists (replace the Gmail address)
-- [ ] Booking link (Calendly / Cal.com / Microsoft Bookings) replaces `mailto:`
-- [ ] Business phone (`tel:` link) and LinkedIn URL in the footer + JSON-LD `sameAs`
-- [ ] Real testimonials / client logos when available (none were invented for this draft)
-- [ ] Convert the wordmark in `assets/logo.svg` to outlines for production use
+- [ ] **Checkout:** this static site can't run WooCommerce. Buy buttons currently link to the existing WooCommerce product page, which stops working if `yufemi.com` is pointed at Vercel. Choose WooCommerce on `shop.yufemi.com`, Shopify, or Stripe Payment Links first (see `docs/yufemi-strategy.md` §7).
+- [ ] `hello@yufemi.com` mailbox exists (replaces both Gmail addresses)
+- [ ] Instagram profile URL in the footer
+- [ ] Waitlist provider (Klaviyo / Mailchimp / Kit) instead of `mailto:`
+- [ ] "Wildcrafted" / "Organic" claims and where the gel is made
+- [ ] Original vector logo from the designer (the site uses a raster extracted from the current logo)
+- [ ] No reviews or testimonials were invented for this draft
