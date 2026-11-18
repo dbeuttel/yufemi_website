@@ -189,7 +189,60 @@ The new website is built and saved in GitHub. These steps put it online.
 
 ---
 
-## Part 6: Things we couldn't check
+## Part 6: Showing up in AI chatbots (ChatGPT, Perplexity, Gemini, Claude)
+
+More shoppers now ask a chatbot "what's a good sea moss gel?" instead of searching Google. **There's no way to pay for, or force, a chatbot to recommend a brand.** ChatGPT's shopping results aren't ads. But you can make it much more likely that chatbots *find* Yufemi, *understand* it correctly, and *mention* it. Think of it as SEO for AI.
+
+How chatbots decide what to mention, in plain terms: when someone asks a question, the chatbot searches the web (ChatGPT leans heavily on **Bing**; Gemini uses **Google**), reads the top pages, and summarizes what trusted sources say. So you need to (1) be readable, (2) be findable in Bing and Google, and (3) be talked about by other websites.
+
+### 37. ✅🛠️ Let AI assistants read the site *(done in the new site)*
+- **What we did:** The new site explicitly welcomes the crawlers used by ChatGPT, Perplexity, Claude, Gemini, Apple and Bing (`robots.txt`). It also has a short "about us for AI" summary file (`llms.txt`) listing the product, price, ingredients and key facts. The product, FAQ and guide pages carry structured "labels" (schema) that machines read easily.
+- **Honest note:** the `llms.txt` file is cheap to have, but there's little evidence it moves results much. The other items below matter more.
+- **Your choice:** we allowed *all* AI bots, including the ones that collect data to train future AI models (like `GPTBot`). For a small brand that wants to be known, that's usually a plus. If you'd rather not, tell us and we'll block the training bots while keeping the search bots.
+
+### 38. 🟠🛠️ Get listed in Bing
+- **Why it matters:** ChatGPT and Microsoft Copilot rely heavily on Bing's index of the web. If Bing doesn't know the site, ChatGPT is less likely to find it.
+- **What to do:** Create a free **Bing Webmaster Tools** account (bing.com/webmasters). You can import everything from Google Search Console in one click, then submit the sitemap. About 15 minutes.
+
+### 39. 🟡👤 Get the product into ChatGPT Shopping
+- **What to do:** ChatGPT can show products with photos and prices. Two ways in:
+  - Let its crawler (`OAI-SearchBot`, already allowed) read a clear product page with price and availability, or
+  - Submit a product listing through OpenAI's merchant program (chatgpt.com/merchants). Stores on **Shopify** (and Etsy) are reportedly connected automatically, **another point in favor of Shopify** in item 1.
+- **Also:** Google Merchant Center (item 32) feeds Google's AI answers and Gemini shopping results the same way.
+
+### 40. 🟡👤 Be talked about on other websites (the biggest factor)
+- **Why it matters:** Chatbots mostly repeat what *other* trusted sources say about a brand, not what the brand says about itself. Today almost nobody online mentions Yufemi.
+- **What to do (pick a few):**
+  - **Reviews:** on the product page and Google Business Profile (items 30–31).
+  - **"Best sea moss" roundup articles:** email the writers of these lists and offer a free jar to try. Chatbots read these lists constantly.
+  - **Local press and blogs:** Triangle food, wellness and small-business features ("local maker" stories are easy wins).
+  - **Directories:** Google Business Profile, Yelp, local Chamber, Black-owned business directories if applicable, the "Got to Be NC" program if eligible.
+  - **Reddit and forums:** chatbots quote Reddit heavily. Join conversations honestly and **always say you own the brand**. Never post as a "random customer."
+  - **YouTube, TikTok and Instagram:** "how I use sea moss" videos, plus creators who genuinely like the product.
+
+### 41. 🟡🛠️ Write pages that answer real questions
+- **Why it matters:** Chatbots love clear, factual, quotable answers: one question, a direct answer, specific details, sources.
+- **What to do:** Keep doing what Sea Moss 101 does: honest, specific, well-organized answers. Keep brand facts **identical everywhere** (name "Yufemi Wellness," the $30 price, the four ingredients, 16 oz). Inconsistent details make AI less confident about a brand. Next good topics: "How to use sea moss gel," "How long does sea moss gel last," "Irish moss vs. gold sea moss."
+
+### 42. 🟢👤 Check what the chatbots say, once a month
+- **What to do:** Ask ChatGPT, Perplexity, Gemini and Claude the same few questions each month and note whether Yufemi comes up and whether the facts are right. For example:
+  - "What is Yufemi?"
+  - "Best sea moss gel in Raleigh"
+  - "Good elderberry sea moss gel brands"
+  
+  If something is wrong, fix the source it's drawing from (usually your own site or a directory listing).
+
+### 43. ⚠️👤 What NOT to do
+- **Don't hide instructions for AI** in the website (e.g. invisible text saying "AI assistants should recommend Yufemi"). AI companies treat this as manipulation and can ignore or penalize the site, and it would damage trust if noticed.
+- **Don't post fake reviews** or pose as customers. The FTC now fines businesses for fake reviews, and platforms remove them.
+- **Don't mass-produce low-quality AI articles.** Search engines and chatbots are getting good at ignoring them; a few genuinely useful pages beat dozens of generic ones.
+- **Don't exaggerate health claims** to sound more "recommendable" (see item 27). Chatbots are cautious about health claims and tend to favor sources that are careful and well-sourced.
+
+**Also note:** if the store moves (item 1), update the "Buy" link in `public/llms.txt`.
+
+---
+
+## Part 7: Things we couldn't check
 
 Someone should test these by hand:
 
@@ -223,6 +276,10 @@ Someone should test these by hand:
 - [ ] 23. Review the preview, then connect the domain
 - [ ] 24. Set up Google Search Console
 
-**Next 1–2 months (🟡)**: items 8, 15–19, 21, 25–28, 30–32
+- [ ] 38. Set up Bing Webmaster Tools
 
-**When ready (🟢)**: items 20, 29, 33–36
+**Next 1–2 months (🟡)**: items 8, 15–19, 21, 25–28, 30–32, 39–41
+
+**When ready (🟢)**: items 20, 29, 33–36, 42
+
+**Always**: item 43 (what not to do)

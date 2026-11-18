@@ -1,4 +1,39 @@
+# Yufemi Wellness: everyone is welcome to read this site.
+
 User-agent: *
+Allow: /
+
+# AI search & assistant crawlers (listed explicitly so there's no doubt)
+# OpenAI: ChatGPT search & shopping, user-initiated visits, model training
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+# Google (Gemini / AI Overviews) and Apple Intelligence
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Microsoft Bing (also feeds Copilot and parts of ChatGPT search)
+User-agent: Bingbot
 Allow: /
 
 Sitemap: https://yufemi.com/sitemap.xml

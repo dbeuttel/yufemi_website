@@ -268,6 +268,19 @@ Each guide links to the product, includes a recipe card (Recipe schema), and get
 | GBP views, direction/website clicks | GBP | Monthly |
 | Core Web Vitals | Search Console / PageSpeed | Monthly |
 
+### 5.8 AI assistant visibility (ChatGPT, Perplexity, Gemini, Claude)
+
+AI answers are grounded in web search (ChatGPT/Copilot lean on Bing; Gemini/AI Overviews on Google), and they favor third-party consensus over brand claims. Plan:
+
+1. **Crawlability:** `robots.txt` explicitly allows OAI-SearchBot, ChatGPT-User, GPTBot, PerplexityBot, Perplexity-User, ClaudeBot, Claude-SearchBot, Claude-User, Google-Extended, Applebot-Extended and Bingbot. `llms.txt` summarizes brand facts (low expected impact; cheap).
+2. **Indexes:** Bing Webmaster Tools + Google Search Console; sitemap submitted to both.
+3. **Product feeds:** Google Merchant Center; OpenAI merchant program (chatgpt.com/merchants). Shopify catalogs are reportedly connected automatically.
+4. **Entity consistency:** identical name, price, ingredients and size across site, schema, GBP, directories and social.
+5. **Third-party mentions:** reviews, roundup articles, local press, directories, Reddit (disclosed), creators.
+6. **Answer-shaped content:** Q&A structure, specific facts, sources (Sea Moss 101 is the template).
+7. **Measurement:** monthly fixed prompt set across ChatGPT, Perplexity, Gemini and Claude; log mentions, accuracy and cited domains.
+8. **Avoid:** hidden prompt-injection text, fake reviews (FTC rule), mass AI content, inflated health claims.
+
 ---
 
 ## 6. Animation & motion concepts
