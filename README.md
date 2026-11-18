@@ -4,8 +4,9 @@ Draft homepage and strategy for **Yufemi Wellness** (small-batch sea moss gel; a
 
 | Path | What it is |
 |---|---|
+| [`OUTSTANDING-ISSUES.md`](OUTSTANDING-ISSUES.md) | **Start here.** Plain-English list of open issues, decisions and recommendations |
 | [`docs/yufemi-strategy.md`](docs/yufemi-strategy.md) | Business & competitor analysis, brand kit, site issues, SEO plan, animation concepts |
-| `public/` | The static site Vercel serves (HTML/CSS/JS, no build step) |
+| `public/` | The static site Vercel serves: homepage (`index.html`) and Sea Moss 101 guide (`sea-moss.html` → `/sea-moss`) |
 | `public/assets/` | Logo mark (extracted from the current logo file), product photo, social share image (`og-image.png`) |
 | `vercel.json` | Output directory, clean URLs, 301 redirects from the old WordPress URLs, security headers |
 
